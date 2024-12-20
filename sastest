@@ -1,0 +1,16 @@
+# Save as run_bandit.py
+import subprocess
+
+def run_bandit():
+    # Run Bandit security scan
+    result = subprocess.run(['bandit', '-r', '.'], capture_output=True, text=True)
+    if result.returncode != 0:
+        print("Bandit found issues:")
+        print(result.stdout)
+        return False
+    else:
+        print("No issues found by Bandit.")
+        return True
+
+if __name__ == "__main__":
+    run_bandit()
