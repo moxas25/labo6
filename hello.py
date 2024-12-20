@@ -45,7 +45,9 @@ def main():
     print("File Content: ", write_and_read_file(filename, content))
     
     print("API Key: ", get_api_key())
-
+    print("test")
 
 if __name__ == "__main__":
     main()
+
+
