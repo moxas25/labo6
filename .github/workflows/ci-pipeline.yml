@@ -25,9 +25,9 @@ jobs:
         python -m pip install --upgrade pip
         pip install --use-deprecated=legacy-resolver -r requirements.txt
 
-    - name: Run Unit Tests
+    - name: Run Pytest
       run: |
-        pytest test_script.py
+        pytest
 
     - name: Run Bandit (SAST) - Security Analysis
       run: |
