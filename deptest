@@ -1,0 +1,16 @@
+# Save as run_safety.py
+import subprocess
+
+def run_safety():
+    # Run Safety dependency check
+    result = subprocess.run(['safety', 'check', '--full-report'], capture_output=True, text=True)
+    if result.returncode != 0:
+        print("Safety found vulnerabilities:")
+        print(result.stdout)
+        return False
+    else:
+        print("No vulnerabilities found by Safety.")
+        return True
+
+if __name__ == "__main__":
+    run_safety()
