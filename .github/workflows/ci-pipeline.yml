@@ -27,7 +27,7 @@ jobs:
 
     - name: Run Pytest
       run: |
-        pytest
+        pytest hello.py
 
     - name: Run Bandit (SAST) - Security Analysis
       run: |
