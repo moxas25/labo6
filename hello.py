@@ -3,7 +3,11 @@ import math
 import string
 import hashlib
 import json
+def test_addition():
+    assert 1 + 1 == 2
 
+def test_subtraction():
+    assert 2 - 1 == 1
 # 1. Data Manipulation: Convert a dictionary to a sorted JSON string
 def dict_to_sorted_json(data):
     return json.dumps(data, sort_keys=True)
